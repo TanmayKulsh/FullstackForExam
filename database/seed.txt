@@ -1,0 +1,22 @@
+create database sahu;
+use sahu;
+
+create table auth (
+prn varchar(20),
+password varchar(20));
+
+create table studData(
+prn varchar(20),
+studname varchar(25),
+course varchar(20),
+phone varchar(20),
+marks decimal(9,2),
+doa date);
+
+
+insert into auth values("111222333","tanmay");
+insert into auth values("111122223","sahu");
+insert into auth values("112233445","solankhi");
+
+
+insert into studData values("111222333","Tanmay Kulshrestha","PG-DAC","9649211123",91.00,"2000-01-20");
