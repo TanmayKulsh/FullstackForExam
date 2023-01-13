@@ -10,8 +10,8 @@ const Login = () => {
 
     const auth = (event) => {
         event.preventDefault();
-        var prn = document.getElementById("prn").value;        
-        var pass = document.getElementById("password").value; 
+        // var prn = document.getElementById("prn").value;        
+        // var pass = document.getElementById("password").value; 
         
         // Service.authenticate(prn,pass)
         // .then((resp) => {

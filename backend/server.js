@@ -1,7 +1,7 @@
 const express = require('express');
 // const routes = require
 const mysql = require('mysql');
-
+const Cors = require('cors');
 const app = express(); 
 
 const db = mysql.createConnection({
@@ -11,13 +11,15 @@ const db = mysql.createConnection({
     database: 'sahu'
 })
 
-app.use(function (req,res,next){
-    res.setHeader('Access-Control-Allow-Origin','*');
-    res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,DELETE');
-    res.setHeader('Access-Control-Allow-Headers','Content-Type');
-    res.setHeader('Access-Control-Allow-Credentials',true);
-    next();
-})
+// app.use(function (req,res,next){
+//     res.setHeader('Access-Control-Allow-Origin','*');
+//     res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,DELETE');
+//     res.setHeader('Access-Control-Allow-Headers','Content-Type');
+//     res.setHeader('Access-Control-Allow-Credentials',true);
+//     next();
+// })
+
+// app.use(Cors('*'));
 
 app.get("/", (req,resp) => {
     resp.send("<h1>Welcome to beckend of the server<h1>");
